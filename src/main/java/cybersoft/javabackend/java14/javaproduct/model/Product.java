@@ -1,4 +1,4 @@
-package cybersoft.javabackend.java14.javaproduct.service;
+package cybersoft.javabackend.java14.javaproduct.model;
 
 public class Product {
 	private String name;

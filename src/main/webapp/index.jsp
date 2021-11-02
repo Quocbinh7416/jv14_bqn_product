@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="cybersoft.javabackend.java14.javaproduct.service.ProductService" %>
-<%@ page import="cybersoft.javabackend.java14.javaproduct.service.Product" %>
+<%@ page import="cybersoft.javabackend.java14.javaproduct.model.Product" %>
 <!DOCTYPE html>
 <html>
 <head>

@@ -1,32 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="cybersoft.javabackend.java14.javaproduct.service.ProductService" %>
-<%@ page import="cybersoft.javabackend.java14.javaproduct.model.Product" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Product</title>
+<title>Home Page</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-	<h1>Welcome</h1>
-	<%! ProductService productService = new ProductService(); %>
-	<table>
-		<tr>
-			<th>Name</th>
-			<th>Description</th>
-			<th>Price</th>
-			<th>Quantity</th>
-		</tr>		
-	<%for(Product product: productService.getProducts()){%>
-		<tr>
-			<td><%= product.getName()%></td>
-			<td><%= product.getDescription() %></td>
-			<td><%= product.getPrice() %></td>
-			<td><%= product.getQuantity() %></td>
-		</tr>
-	<%};%>
-	</table>
-	<a href="/Java14Product/addProduct">Add Product</a>
+	<h1>Welcome to our pages</h1>
+	<a class="btn btn-success"  href="/Java14Product/products">More products !!!</a>	
+	
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>

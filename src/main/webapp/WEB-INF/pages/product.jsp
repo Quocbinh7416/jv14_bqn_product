@@ -30,9 +30,7 @@
 	              <td>${ product.price }</td>
 	              <td>${ product.quantity }</td>
 	              <td>
-	              	<form action="products/remove" method="post">
-	              		<input class="btn btn-danger" type="submit" value="Remove">
-	              	</form>
+	              	<a class="btn btn-danger" href="products/remove?name=${product.name }">Remove</a>
 	              </td>
 	            </tr>
           	</c:forEach>

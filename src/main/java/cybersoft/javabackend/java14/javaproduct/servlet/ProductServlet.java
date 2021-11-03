@@ -38,8 +38,10 @@ public class ProductServlet extends HttpServlet {
 			.forward(req, resp);
 			break;
 		case "/products/remove":
-			req.getRequestDispatcher("/WEB-INF/pages/product.jsp")
-			.forward(req, resp);
+			String name = req.getParameter("name");
+			service.removeProduct(name);
+			
+			resp.sendRedirect("/Java14Product/products");
 			break;
 
 		default:
@@ -55,17 +57,6 @@ public class ProductServlet extends HttpServlet {
 		Integer quantity = Integer.parseInt(req.getParameter("quantity"));
 		Product product = new Product(name, desc, price, quantity);
 		this.service.addProduct(product);
-		
-		String path = req.getServletPath();
-		switch (path) {	
-		case "/products/add":
-			resp.sendRedirect(req.getContextPath() + "/products");
-			break;
-		case "/products/remove":
-			this.doGet(req, resp);
-			break;
-		default:
-			break;
-		}
+		resp.sendRedirect(req.getContextPath() + "/products");
 	}
 }
